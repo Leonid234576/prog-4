@@ -72,14 +72,14 @@ vector<int> bellmanford(int n,int start,vector<vector<pair<int,int>>>g)
 }
 int main()
 {
-    freopen("input10.txt","w",stdout);
+    //freopen("input10.txt","w",stdout);
     int n,edges,a,b,c,start;
     bool check;
     //cout<<"Vnesi broj na teminja i rabovi:";
     cin>>n>>edges;
     vector<vector<pair<int,int>>>g(n);
     //cout<<"Dali bi sakal ti da generiras graf?Odgovori binarno:";
-    check=0;
+    cin>>check;
     if(check)
     {
         for(int i=0;i<edges;i++)
@@ -91,7 +91,7 @@ int main()
     else generiraj(n,edges,g);
     //cout<<"Vnesi pocetno teme:";
     cin>>start;
-    freopen("output10.txt","w",stdout);
+    //freopen("output10.txt","w",stdout);
     vector<int>res=bellmanford(n,start,g);
     for(auto i:res)
     {
@@ -102,3 +102,4 @@ int main()
     }
     return 0;
 }
+
